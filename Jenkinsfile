@@ -32,6 +32,7 @@ pipeline {
         }
       }
     }
+    
     stage('dependency-check owasp-scan') {
       steps {
         sh 'mvn -Djava.io.tmpdir=/opt/dependency-check-data/tmp \
