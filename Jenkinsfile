@@ -94,7 +94,7 @@ pipeline {
 
     stage('trivy-scan dockerized-image') {
       steps {
-        sh 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/trivy-cache:/root/.cache/ aquasec/trivy:latest image --severity CRITICAL,HIGH --quiet abdelrahmanvio/numeric-application:"$GIT_COMMIT"'
+        sh 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/trivy-cache:/root/.cache/ aquasec/trivy:latest image --severity CRITICAL,HIGH  --quiet abdelrahmanvio/numeric-application:"$GIT_COMMIT"'
       }
     }
 
@@ -163,7 +163,7 @@ pipeline {
           slackSend (
             channel: '#jenkins-devsecops-project',
             color: 'danger',
-            message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} failed!"
+            message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} failed}!"
           )
         }
         success {

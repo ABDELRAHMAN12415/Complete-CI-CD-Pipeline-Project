@@ -1,4 +1,3 @@
-
 # Numeric Application – DevSecOps CI/CD Pipeline 🚀🔐
 
 ![untitleddiagram drawio(7)_25e44115](https://github.com/user-attachments/assets/26778b47-594f-464f-a4ba-2dc0799e42bd)
